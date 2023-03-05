@@ -1,13 +1,13 @@
 const email = document.getElementById("email");
 const senha = document.getElementById("password");
-const validaEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const SECRET = "ableblué";
 //const jwt = require("jsonwebtoken")
 
 let userValid = {
     name: "",
     email: "",
-    senha: ""
+    senha: "",
+    telefone: ""
 }
 
 let usuarioLogado = JSON.parse(localStorage.getItem("userLogado"));
@@ -20,7 +20,7 @@ async function logar() {
         window.alert("Digite uma senha!")
     }
     else {
-        const resp = await fetch("http://localhost:3000/users/")
+        const resp = await fetch("http://localhost:3000/users")
         console.log(resp)
 
         const data = await resp.json();
@@ -30,7 +30,8 @@ async function logar() {
                 userValid = {
                     nome: data[i].nome,
                     email: data[i].email,
-                    senha: data[i].senha
+                    senha: data[i].senha,
+                    telefone: data[i].telefone
                 }
                 //const token = jwt.sign({email: data[i].email}, SECRET, {expiresIn: 300});
                 let token = Math.random().toString(16).substring(2) + Math.random().toString(16).substring(2);

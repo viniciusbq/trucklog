@@ -8,7 +8,6 @@ if(userLogado != null){
     loginBtn.style.display = "none";
     dropdownUser.style.display = "block"
     userName.innerHTML = userLogado.nome;
-    console.log("AAA");
 }
 else{
     loginBtn.style.display = "block";

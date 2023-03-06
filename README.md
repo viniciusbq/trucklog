@@ -11,7 +11,7 @@ Projeto desenvolvido através do programa vem ser da DBC Company durante o módu
 </p>
 <p align="center">
 Utilizamos o json-server para as mensagens, login e signin. <br/>
-Comandos para o json-server: <br/>Mensagens: json-server --watch db.json;<br/> Login/Signin json-server --watch db-users.json</p>
+Comandos para o json-server: <br/>Mensagens: json-server --watch db.json;<br/> Login/Signin: json-server --watch db-users.json</p>
 <p align="center">
   <img alt="imagem do site pronto" src="./assets/readme-img.png">
 </p>

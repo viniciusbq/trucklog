@@ -12,7 +12,7 @@ Projeto desenvolvido através do programa vem ser da DBC Company durante o módu
 <p align="center">
 Utilizamos o json-server para as mensagens, login e signin. <br/>
   Passos:
- <br/>Mensagens:<br> 1- executar : json-server --watch db.json --port 5500 (irá inicializar o db.json na porta 5500);<br/> Login/Signin: <br/> executar : json-server --watch db-users.json --port 5500 (irá inicializar o db-users.json na porta 5500)</p>
+ <br/>Mensagens:<br> 1- executar : json-server --watch db.json --port 5500 (irá inicializar o db.json na porta 5500);<br/> Login/Signin: <br/> 1- executar : json-server --watch db-users.json --port 5500 (irá inicializar o db-users.json na porta 5500)</p>
 <p align="center">
   <img alt="imagem do site pronto" src="./assets/readme-img.png">
 </p>

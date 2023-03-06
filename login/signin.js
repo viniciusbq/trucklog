@@ -46,7 +46,7 @@ function cadastrar() {
     }
 
     if (user != null) {
-        fetch('http://localhost:3000/users', {
+        fetch('https://json-login-kappa.vercel.app/users', {
       method: 'POST',
       body: JSON.stringify(user),
       headers: {

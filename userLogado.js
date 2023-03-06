@@ -8,7 +8,6 @@ if (userLogado != null) {
   loginBtn.style.display = 'none';
   dropdownUser.style.display = 'block';
   userName.innerHTML = userLogado.nome;
-  console.log('AAA');
   function verificarLogin() {
     window.location.href =
       'http://127.0.0.1:5500/trucklog/meus-posts/index.html';

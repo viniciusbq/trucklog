@@ -44,7 +44,7 @@ function postComment() {
       })
       .catch((error) => console.error('Error:', error));
   }
-  window.location.reload();
+  window.location.reload;
 }
 
 async function addComents() {

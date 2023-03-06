@@ -47,12 +47,14 @@ function cadastrar() {
 
     if (user != null) {
         fetch('https://json-login-kappa.vercel.app/users', {
-      method: 'POST',
-      body: JSON.stringify(user),
-      headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-      },
-    })
+            method: 'POST',
+            body: JSON.stringify(user),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+        alert("cadastrado!")
+        window.location.href = '../../index.html';
     }
 
 }
@@ -62,7 +64,7 @@ async function post(data) {
         // Create request to api service
         const req = await fetch('https://json-login-kappa.vercel.app/users', {
             method: 'POST',
-            headers: { 'Content-Type':'application/json' },
+            headers: { 'Content-Type': 'application/json' },
 
             // format the data
             body: JSON.stringify({
@@ -77,7 +79,7 @@ async function post(data) {
 
         // Log success message
         console.log(res);
-    } catch(err) {
+    } catch (err) {
         console.error('Error:', err);
     }
 }

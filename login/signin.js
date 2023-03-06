@@ -60,7 +60,7 @@ function cadastrar() {
 async function post(data) {
     try {
         // Create request to api service
-        const req = await fetch('http://localhost:3000/users', {
+        const req = await fetch('https://json-login-kappa.vercel.app/users', {
             method: 'POST',
             headers: { 'Content-Type':'application/json' },
 

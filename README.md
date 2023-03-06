@@ -9,13 +9,15 @@ Projeto desenvolvido através do programa vem ser da DBC Company durante o módu
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#-licença">Licença</a>
 </p>
-
+<p align="center">
+Utilizamos o json-server para as mensagens, login e signin. <br/>
+Comandos para o json-server: <br/> -json-server --watch db.json;<br/> -json-server --watch db-users.json</p>
 <p align="center">
   <img alt="imagem do site pronto" src="./assets/full-website-photo.png">
 </p>
 
 <p align="center">
-  <a href="https://trucklog.vercel.app/" target="_blank">😁 -> Acesse o deploy do projeto!</a>
+  <a href="https://trucklog-three.vercel.app/index.html" target="_blank">😁 -> Acesse o deploy do projeto!</a>
 </p>
 
 <br>

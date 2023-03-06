@@ -187,7 +187,8 @@ a:hover {
 }
 input[type='email'],
 input[type='password'],
-input[type='tel'] {
+input[type='tel'],
+input[type='text'] {
   line-height: 4rem;
   font-size: medium;
   border: 1px transparent;
@@ -200,7 +201,8 @@ input[type='tel'] {
 }
 input[type='email']:focus,
 input[type='password']:focus,
-input[type='tel']:focus {
+input[type='tel']:focus,
+input[type='text']:focus {
   box-shadow: 0 0 15px var(--green-700);
   outline: 0;
 }

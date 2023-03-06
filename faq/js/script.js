@@ -21,6 +21,11 @@ function postComment() {
         nome: nomeUser.value,
         email: emailUser.value,
         comentario: comentarioUser.value,
+        dayPost: day,
+        monthPost: month,
+        yearPost: year,
+        hora: hour,
+        minutos: min,
       }),
       headers: {
         'Content-type': 'application/json; charset=UTF-8',
@@ -44,7 +49,6 @@ function postComment() {
 async function addComents() {
   const response = await fetch('http://localhost:3000/coments');
 
-  console.log(response);
   const data = await response.json();
   console.log(data);
 
@@ -54,12 +58,13 @@ async function addComents() {
     const emailPost = document.createElement('p');
     const comentPost = document.createElement('p1');
     const dataPost = document.createElement('p3');
-    const horaPost = hour < 10 ? `0${hour}` : hour;
-    const minPost = min < 10 ? `0${min}` : min;
+    const horaPost = response.hora < 10 ? `0${response.hora}` : response.hora;
+    const minPost =
+      response.minutos < 10 ? `0${response.minutos}` : response.minutos;
     namePost.innerText = response.nome;
     emailPost.innerText = response.email;
     comentPost.innerText = `"${response.comentario}"`;
-    dataPost.innerHTML = `${day} de ${month} ${year}<br/>${horaPost}:${minPost}`;
+    dataPost.innerHTML = `${response.dayPost} de ${response.monthPost} de ${response.yearPost}<br/>${horaPost}:${minPost}`;
 
     div.appendChild(namePost);
     div.appendChild(dataPost);

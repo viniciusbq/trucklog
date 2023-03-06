@@ -47,7 +47,9 @@ function postComment() {
 }
 
 async function addComents() {
-  const response = await fetch('http://localhost:3000/coments');
+  const response = await fetch(
+    `http://localhost:${window.location.port}/coments`
+  );
 
   const data = await response.json();
   console.log(data);
@@ -76,4 +78,3 @@ async function addComents() {
 }
 
 addComents();
-

@@ -9,13 +9,12 @@ if (userLogado != null) {
   dropdownUser.style.display = 'block';
   userName.innerHTML = userLogado.nome;
   function verificarLogin() {
-    window.location.href =
-      'http://127.0.0.1:5500/trucklog/meus-posts/index.html';
+    window.location.href = '../meus-posts/index.html';
   }
 } else {
   loginBtn.style.display = 'block';
   dropdownUser.style.display = 'none';
   function verificarLogin() {
-    window.location.href = 'http://127.0.0.1:5500/trucklog/login/index.html';
+    window.location.href = '../login/index.html';
   }
 }

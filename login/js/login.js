@@ -18,7 +18,7 @@ async function logar() {
   } else if (senha.value === '') {
     window.alert('Digite uma senha!');
   } else {
-    const resp = await fetch('http://localhost:3000/users/');
+    const resp = await fetch(`http://localhost:${window.location.port}/users/`);
     console.log(resp);
 
     const data = await resp.json();
@@ -48,5 +48,5 @@ async function logar() {
 function deslogar() {
   localStorage.removeItem('token');
   localStorage.removeItem('userLogado');
-  window.location.href = 'http://127.0.0.1:5500/trucklog/index.html';
+  window.location.href = '../../index.html';
 }

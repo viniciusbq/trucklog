@@ -54,7 +54,7 @@
           <a href="../quem-somos/index.html">Quem Somos</a>
           <a href="../beneficios/index.html">Benefícios</a>
           <a href="../faq/index.html">Mensagens</a>
-        <a href="../meus-posts/index.html">Dashboard</a>
+        <a onclick="verificarLogin()" >Dashboard</a>
 
         </nav>
         <div class="btn-group" id="dropdown-user">
@@ -74,11 +74,7 @@
         </a> 
        
       </div>
-      <a href="../login/index.html" id="login-btn" class="login">
-        <button class="desktop " style="font-size: 2rem;">
-          Faça Login
-        </button> </a>
-      </a>
+  
     </div>
   </header>
   <div class="row">
@@ -111,8 +107,8 @@
                 <input type="text" id="peso" name="peso" style="font-size: 16px; margin-top: 0.5%; margin-left: 45px; border-radius: 9px;"><br>
                 <div class="buttons" style="display: flex; gap: 1rem; width: 50vw; align-items: center; margin-left: -35%;
                 ">
-                    <a class="btn btn-success" style="padding:  10px; font-size: 10px; margin-top: 3px; border-radius: 13px; width: 15rem; align-items: center;"  id="botao-enviar" onclick="buscarCep(); buscarCep2(); calcularFrete()"><b style="color: aliceblue;">Calcular frete</b></a>
-                    <a class="btn btn-success" style="padding: 10px; font-size: 10px; margin-top: 3px; border-radius: 13px; width: 10rem; align-items: center;" onclick="location.reload()"><b style="color: aliceblue;">Limpar</b> </a>
+                    <a class="btn btn-success" style="padding:  10px; font-size: 10px; margin-top: 3px; border-radius: 13px; width: 15rem; align-items: center; color: #fff !important; background-color: #3cbd96; border: none;"  id="botao-enviar" onclick="buscarCep(); buscarCep2(); calcularFrete()"><b;">Calcular frete</b></a>
+                    <a class="btn btn-success" style="padding: 10px; font-size: 10px; margin-top: 3px; border-radius: 13px; width: 10rem; align-items: center; color: #fff !important; background-color: #3cbd96; border: none;" onclick="location.reload()"><b >Limpar</b> </a>
                   </div>
                 <br>  
               <div>
@@ -139,7 +135,7 @@
             <li class="desktop"><a href="../beneficios/index.html">Benefícios</a></li>
             <li class="desktop"><a href="../login/index.html">Login</a></li>
             <li class="desktop">
-              <a href="../meus-posts/index.html">Dashboard</a>
+              <a onclick="verificarLogin()" >Dashboard</a>
             </li>
           </ul>
         </nav>

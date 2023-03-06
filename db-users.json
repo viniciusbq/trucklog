@@ -6,6 +6,13 @@
       "senha": "A124578Bb",
       "telefone": "5145781236",
       "id": 1
+    },
+    {
+      "nome": "Gustavo",
+      "email": "gustavoea@gmail.com",
+      "senha": "A172030b",
+      "telefone": "5186283033",
+      "id": 2
     }
   ]
 }

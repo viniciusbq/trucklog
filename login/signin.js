@@ -45,7 +45,7 @@ function cadastrar() {
         alert("Digite um telefone válido")
     }
 
-    if (user != null) {
+    if (user.nome.trim() != "" && user.email.trim() != "" && user.senha.trim() != "" && user.telefone.trim() != "") {
         fetch('https://json-login-kappa.vercel.app/users', {
             method: 'POST',
             body: JSON.stringify(user),

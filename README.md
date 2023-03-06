@@ -27,7 +27,9 @@ Comandos para o json-server: <br/>Mensagens: json-server --watch db.json;<br/> L
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML
-- CSS (Flexbox)
+- CSS (Flexbox , Bootstrap)
+- Javascript
+- Json-Server
 - Git e Github
 - Phosphor Icons - CDN
 

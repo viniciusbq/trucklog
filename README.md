@@ -52,4 +52,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Made with 💙 by Alberto, Luan e Rafael
+

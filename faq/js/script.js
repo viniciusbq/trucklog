@@ -15,7 +15,7 @@ function postComment() {
   } else if (emailUser.value === '') {
     return alert('Digite o Email !');
   } else {
-    fetch('http://localhost:3000/coments', {
+    fetch('https://json-vercel.vercel.app/coments', {
       method: 'POST',
       body: JSON.stringify({
         nome: nomeUser.value,

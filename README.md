@@ -1,7 +1,7 @@
 <h1 align="center">TruckLog App</h1>
 
 <p align="center">
-Projeto desenvolvido através do programa vem ser da DBC Company durante o módulo de HTML e CSS<br/>
+Projeto desenvolvido através do programa vem ser da DBC Company durante o módulo de HTML e CSS (Aprimorado com Javascript)<br/>
 </p>
 
 <p align="center">
@@ -11,7 +11,8 @@ Projeto desenvolvido através do programa vem ser da DBC Company durante o módu
 </p>
 <p align="center">
 Utilizamos o json-server para as mensagens, login e signin. <br/>
-Comandos para o json-server: <br/> -json-server --watch db.json;<br/> -json-server --watch db-users.json</p>
+  Passos:
+ <br/>Mensagens:<br> 1- executar : json-server --watch db.json --port 5500 (irá inicializar o db.json na porta 5500);<br/> Login/Signin: <br/> executar : json-server --watch db-users.json --port 5500 (irá inicializar o db-users.json na porta 5500)</p>
 <p align="center">
   <img alt="imagem do site pronto" src="./assets/readme-img.png">
 </p>
@@ -27,7 +28,9 @@ Comandos para o json-server: <br/> -json-server --watch db.json;<br/> -json-serv
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
 - HTML
-- CSS (Flexbox)
+- CSS (Flexbox , Bootstrap)
+- Javascript
+- Json-Server
 - Git e Github
 - Phosphor Icons - CDN
 
@@ -50,4 +53,4 @@ Esse projeto está sob a licença MIT.
 
 ---
 
-Made with 💙 by Alberto, Luan e Rafael
+

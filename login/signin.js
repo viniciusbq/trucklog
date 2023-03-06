@@ -53,8 +53,6 @@ function cadastrar() {
         'Content-type': 'application/json; charset=UTF-8',
       },
     })
-    alert("conta criada com sucesso!");
-    window.location.href = '../../index.html';
     }
 
 }

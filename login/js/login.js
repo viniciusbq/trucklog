@@ -18,7 +18,7 @@ async function logar() {
   } else if (senha.value === '') {
     window.alert('Digite uma senha!');
   } else {
-    const resp = await fetch(`http://localhost:${window.location.port}/users/`);
+    const resp = await fetch('https://json-login-kappa.vercel.app/users');
     console.log(resp);
 
     const data = await resp.json();

@@ -16,7 +16,7 @@ function postComment() {
   } else if (emailUser.value === '') {
     return alert('Digite o Email !');
   } else {
-     window.location.reload();
+     
     fetch('https://json-vercel.vercel.app/coments', {
       method: 'POST',
       body: JSON.stringify({
@@ -46,6 +46,7 @@ function postComment() {
        window.location.reload();
       })
       .catch((error) => console.error('Error:', error));
+   window.location.reload();
   }
   
 }

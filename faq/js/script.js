@@ -10,13 +10,11 @@ const hour = date.getHours();
 const min = date.getMinutes();
 
 function postComment() {
- 
   if (nomeUser.value === '') {
     return alert('Digite o Nome !');
   } else if (emailUser.value === '') {
     return alert('Digite o Email !');
   } else {
-     
     fetch('https://json-vercel.vercel.app/coments', {
       method: 'POST',
       body: JSON.stringify({
@@ -37,24 +35,20 @@ function postComment() {
         return console.log(response.json());
       })
       .then(function (data) {
+        window.location.reload();
         nome = document.getElementById('postName');
         email = document.getElementById('postEmail');
         comentario = document.getElementById('postComent');
         nome.innerHTML = data.nome;
         email.innerHTML = data.email;
         comentario.innerHTML = data.comentario;
-       window.location.reload();
       })
       .catch((error) => console.error('Error:', error));
-   window.location.reload();
   }
-  
 }
 
 async function addComents() {
-  const response = await fetch(
-    'https://json-vercel.vercel.app/coments'
-  );
+  const response = await fetch('https://json-vercel.vercel.app/coments');
 
   const data = await response.json();
   console.log(data);

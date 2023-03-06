@@ -48,5 +48,5 @@ async function logar() {
 function deslogar() {
   localStorage.removeItem('token');
   localStorage.removeItem('userLogado');
-  window.location.href = '../../index.html';
+  document.location.href = '/';
 }

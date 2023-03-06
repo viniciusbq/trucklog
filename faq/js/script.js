@@ -15,7 +15,7 @@ function postComment() {
   } else if (emailUser.value === '') {
     return alert('Digite o Email !');
   } else {
-    fetch('http://localhost:3000/coments', {
+    fetch('https://json-vercel.vercel.app/coments', {
       method: 'POST',
       body: JSON.stringify({
         nome: nomeUser.value,
@@ -47,7 +47,7 @@ function postComment() {
 }
 
 async function addComents() {
-  const response = await fetch('http://localhost:3000/coments');
+  const response = await fetch('https://json-vercel.vercel.app/coments');
 
   const data = await response.json();
   console.log(data);

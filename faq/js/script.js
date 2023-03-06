@@ -48,7 +48,7 @@ function postComment() {
 
 async function addComents() {
   const response = await fetch(
-    `http://localhost:${window.location.port}/coments`
+    'https://json-vercel.vercel.app/coments'
   );
 
   const data = await response.json();

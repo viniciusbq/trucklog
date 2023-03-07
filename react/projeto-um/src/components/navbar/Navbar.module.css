@@ -1,0 +1,31 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 2em;
+  height: 8vh;
+  background-color: rgb(124, 124, 124);
+}
+.navbar img {
+  width: 3vw;
+}
+.navbar img:hover {
+  transform: rotate(90deg);
+  transition: 1s;
+}
+
+.navbar .links {
+  display: flex;
+  width: 40vw;
+
+  justify-content: space-evenly;
+}
+
+.navbar .links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.4rem;
+}
+.navbar .links a:hover {
+  transform: scale(1.1);
+}

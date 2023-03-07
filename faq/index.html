@@ -71,9 +71,10 @@
 
     <main>
       <section class="container">
-        <h1>Mensagens</h1>
-        <h3>Aqui você pode ler os comentários de quem já utilizou o nosso produto, além de tambem poder dar sua opinião sobre o TruckLog. </h3>
-        <form class="d-flex"><div>    <div class="mb-3">
+        <h1 class="section-title" style="margin-bottom: 1vh ;">Mensagens</h1>
+        <h2 class="section-subtitle">Deixe seu comentário </h2>
+        <form >
+              <div class="mb-3">
           <label for="inputName" class="form-label">Digite seu Nome:</label>
           <input type="text" class="form-control" id="userName"placeholder="Nome completo..." />
         </div>
@@ -83,21 +84,21 @@
           ></div>
             <input type="email" class="form-control" id="userEmail" placeholder="user@users.com" />
             
-            <input type="button" class="btn btn-secondary" onclick="postComment()" value="Enviar">
           </div>
           
           <div class="mb-3">
             <label for="exampleInputPassword1" id="label-msg" class="form-label"
-              >Sua Mensagem:</label
+            >Sua Mensagem:</label
             >
             <textarea
-              name="comentario"
-              id="comment"
-              cols="30"
-              rows="5"
-              class="form-control"
-              placeholder="Digite sua mensagem aqui..."
+            name="comentario"
+            id="comment"
+            cols="30"
+            rows="5"
+            class="form-control"
+            placeholder="Digite sua mensagem aqui..."
             ></textarea>
+            <input type="button" class="btn btn-secondary" onclick="postComment()" value="Enviar">
           </div>
           </div>
         </form>

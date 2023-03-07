@@ -91,24 +91,24 @@
           />
         </div>
           <body class="contain" >
-          <h1 class="h1-login">Veja Como Funciona Nosso Sistema</h1>
-            <h1 class="h1-login">Aqui Você PodeSimular o Transporte de Uma Encomenda</h1>
-            <p style="font-size: 1.5rem ;  "><b>Nesse campo você pode ver como nossos serviços funcionam fazendo uma simulação de envio de uma encomenda.</b></p>
-            <h3 class="h3-login" style="font-size: x-large;">Insira os dados :</h3>
+          <h1 class="section-title" style="margin-bottom: 1vh ;">Como funciona</h1>
+            <h2 class="section-subtitle" >Aqui você pode simular o transporte de uma encomenda</h2>
+            <p style="font-size: 2rem ; margin: 2rem 0; ">Nesse campo você pode ver como nossos serviços funcionam fazendo uma simulação de envio de uma encomenda.</p>
+            <h3 class="h3-login" style="font-size: x-large; margin-bottom: 3vh;">Insira os dados :</h3>
 
-            <div class='contain'style="display: flex; flex-direction: column; width: 10vw; align-items: flex-start; justify-content: start; margin: 0;">
-                <label for="cep" style="font-size: 1.5rem;"><b>CEP de origem:</b></label>
-                <input type="text" id="cep"  name="cep-origem" style="font-size: 16px;margin: 0; border-radius: 9px;"><br>
+            <div class='contain'style="display: flex; flex-direction: column;width: 16vw;  align-items: center !important; margin: 0;">
+                <label for="cep" style="font-size: 2rem; align-self: start;"><b>CEP de origem:</b></label>
+                <input type="text" id="cep" class="form-control"  name="cep-origem" style="font-size: 20px;margin: 10px 0; width: 15vw; border: 1.5px solid #000;">
           
-                <label for="cep2" style="font-size: 1.5rem;"><b>CEP de destino:</b> </label>
-                <input type="text" id="cep2" name="cep-destino" style="font-size: 16px;border-radius: 9px; margin-top: 0.5%; margin-left: 12px;"><br>
+                <label for="cep2" style="font-size: 2rem;align-self: start;"><b>CEP de destino:</b> </label>
+                <input type="text" id="cep2"class="form-control" name="cep-destino"style="font-size: 20px;margin: 10px 0; width: 15vw; border: 1.5px solid #000;">
           
-                <label for="peso" style="font-size: 1.5rem;"><b>Peso (kg):</b> </label>
-                <input type="text" id="peso" name="peso" style="font-size: 16px; margin-top: 0.5%; margin-left: 45px; border-radius: 9px;"><br>
-                <div class="buttons" style="display: flex; gap: 1rem; width: 50vw; align-items: center; margin-left: -35%;
+                <label for="peso" style="font-size: 2rem;align-self: start;"><b>Peso (kg):</b> </label>
+                <input type="text" id="peso"class="form-control" name="peso" style="font-size: 20px;margin: 10px 0; width: 15vw; border: 1.5px solid #000;">
+                <div class="buttons" style="display: flex; gap: 1rem; width: 50vw; align-items: center; justify-content: center;
                 ">
-                    <a class="btn btn-success" style="padding:  10px; font-size: 10px; margin-top: 3px; border-radius: 13px; width: 15rem; align-items: center; color: #fff !important; background-color: #3cbd96; border: none;"  id="botao-enviar" onclick="buscarCep(); buscarCep2(); calcularFrete()"><b;">Calcular frete</b></a>
-                    <a class="btn btn-success" style="padding: 10px; font-size: 10px; margin-top: 3px; border-radius: 13px; width: 10rem; align-items: center; color: #fff !important; background-color: #3cbd96; border: none;" onclick="location.reload()"><b >Limpar</b> </a>
+                    <a class="btn btn-success" style="padding:  10px; font-size: 10px; border-radius: 13px; margin-top: 2rem;width: 15rem; align-self: center; color: #fff !important; background-color: #3cbd96; border: none;"  id="botao-enviar" onclick="buscarCep(); buscarCep2(); calcularFrete()"><b;">Calcular frete</b></a>
+                    <a class="btn btn-success" style="padding: 10px; font-size: 10px; border-radius: 13px; margin-top: 2rem;width: 10rem; align-self: center; color: #fff !important; background-color: #3cbd96; border: none;" onclick="location.reload()"><b >Limpar</b> </a>
                   </div>
                 <br>  
               <div>

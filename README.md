@@ -25,14 +25,23 @@ Utilizamos o json-server para as mensagens, login e signin. <br/>
 
 ## 🚀 Instruções de Login/Cadastro
 
-Esse projeto foi desenvolvido com as seguintes tecnologias:
-
-- HTML
-- CSS (Flexbox , Bootstrap)
-- Javascript
-- Json-Server
-- Git e Github
-- Phosphor Icons - CDN
+Passos para você realizar seu login e/ou Cadastrar seu usuário.
+<p>1º passo: Ao entrar na página, clicar no botão de "login" no canto superior direito.</p>
+<p align="center">
+  <img alt="imagem login-01" src="./assets/login-01.jpg">
+</p>
+<p>2º passo: Se você possuir cadastro, colocar seu e-mail e senhas nas caixas destinadas e clicar no botão "entrar". Se não possuir cadastro, clicar no link "Ainda não possui conta?" </p>
+<p align="center">
+  <img alt="imagem login-02" src="./assets/login-02.png">
+</p>
+<p>3º passo: Para realizar o seu cadastro é necessário informar seu nome completo, seu email, uma senha com pelo menos 8 caracteres, sendo pelo menos 1 maiúscula, 1 número e um caractere especial (!, @, $, %, . , ....). Após preencher os campos corretamente, clicar no botão "criar", assim aparecendo uma mensagem confirmando seu cadastro.</p>
+<p align="center">
+  <img alt="imagem login-01" src="./assets/login-03.png">
+</p>
+<p>4º passo: Realizar o passo 1 e 2 novamente, porém logando sua conta na página de login e pronto, você estará logado no site do trucklog, podendo aproveitar alguns conteúdos exclusivos para usuários, como visualizar o dashboard.</p>
+<p align="center">
+  <img alt="imagem login-01" src="./assets/login-04.png">
+</p>
 
 ## 🚀 Tecnologias
 

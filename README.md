@@ -1,6 +1,7 @@
 <h1 align="center">TruckLog App</h1>
 
 <p align="center">
+-- Testes realizados: Página Home, Login, SignIn e Dashboard --
 Projeto desenvolvido através do programa vem ser da DBC Company durante o módulo de HTML e CSS (Aprimorado com Javascript)<br/>
 </p>
 

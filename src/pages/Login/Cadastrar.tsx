@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './index.module.css';
+import { useNavigate } from 'react-router-dom';
 
 interface User {
   nome: string;
@@ -111,13 +112,11 @@ const Cadastrar: React.FC = () => {
             </div>
 
             <div className={styles.btn_par}>
-              <div className={styles.btn_par}>
-                <p className={styles.paragrafo}>
-                  <a className="form-link" href="/login">
-                    Já possui conta?
-                  </a>
-                </p>
-              </div>
+              <p className={styles.paragrafo}>
+                <a className="form-link" href="/login">
+                  Já possui conta?
+                </a>
+              </p>
 
               <input
                 type="submit"

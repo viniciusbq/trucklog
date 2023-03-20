@@ -1,17 +1,22 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import styles from "./index.module.css";
-import Botao from "./Button/index";
-import Cadastrar from "./Cadastrar";
+import React from 'react';
+import { useState, useEffect } from 'react';
+import styles from './index.module.css';
+import Botao from './Button/index';
+import Cadastrar from './Cadastrar';
+import Header from '../Home/components/Header';
+import Footer from '../Home/components/Footer';
+import logoImg from './assets/truck-log-logo.svg';
 
 interface User {
+  nome: string;
   email: string;
   senha: string;
 }
 
 let userValid: User = {
-  email: "",
-  senha: "",
+  email: '',
+  nome: '',
+  senha: '',
 };
 
 const Logar: React.FC = () => {
@@ -23,13 +28,13 @@ const Logar: React.FC = () => {
     setMostrarCadastro(true);
   };
 
-  const [email, setEmail] = useState<string>("");
-  const [password, setPassword] = useState<string>("");
+  const [email, setEmail] = useState<string>('');
+  const [password, setPassword] = useState<string>('');
 
   const [users, setUsers] = useState<User[]>([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/users")
+    fetch('http://localhost:3000/users')
       .then((response) => {
         if (response.ok) {
           return response.json();
@@ -37,40 +42,52 @@ const Logar: React.FC = () => {
         throw response;
       })
       .then((data) => setUsers(data))
-      .catch((error) => "");
+      .catch((error) => '');
   }, []);
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
-    if (email === "") {
-      window.alert("Digite um E-mail!");
-    } else if (password === "") {
-      window.alert("Digite uma senha!");
+    if (email === '') {
+      window.alert('Digite um E-mail!');
+    } else if (password === '') {
+      window.alert('Digite uma senha!');
     } else {
       for (let i = 0; i < users.length; i++) {
         if (users[i].email === email && users[i].senha === password) {
-          console.log("login válido");
+          console.log('login válido');
           userValid = {
+            nome: users[i].nome,
             email: users[i].email,
             senha: users[i].senha,
           };
           //const token = jwt.sign({email: data[i].email}, SECRET, {expiresIn: 300});
           let token =
-            Math.random().toString(16).substring(2) +
-            Math.random().toString(16).substring(2);
-          localStorage.setItem("token", token);
-          localStorage.setItem("userLogado", JSON.stringify(userValid));
-          window.location.href = "../index.html";
+            Math.random()
+              .toString(16)
+              .substring(2) +
+            Math.random()
+              .toString(16)
+              .substring(2);
+          localStorage.setItem('token', token);
+          localStorage.setItem('userLogado', JSON.stringify(userValid));
+          window.location.href = '/';
           break;
         } else {
-          alert("Email ou senha inválidos");
+          console.log('Email ou senha inválidos');
         }
       }
     }
   };
 
   return (
-    <>
+    <div className={styles.body}>
+      <a href="/">
+        <img
+          src={logoImg}
+          className={styles.imagem}
+          alt="Caminhão verde da TruckLog"
+        />
+      </a>
       {mostrarCadastro ? (
         <Cadastrar />
       ) : (
@@ -104,12 +121,10 @@ const Logar: React.FC = () => {
                 />
               </div>
               <div className={styles.btn_par}>
-                <p className={styles.paragrafo}>Esqueceu sua senha?</p>
-
                 <input
                   type="submit"
                   className={styles.btn}
-                  value={"Entrar"}
+                  value={'Entrar'}
                   data-testid="submit-button"
                 />
               </div>
@@ -118,7 +133,8 @@ const Logar: React.FC = () => {
           </div>
         </div>
       )}
-    </>
+      <Footer />
+    </div>
   );
 };
 

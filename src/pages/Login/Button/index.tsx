@@ -1,5 +1,4 @@
-import React from "react";
-import styles from "./index.module.css";
+import React from 'react';
 
 interface IBotao {
   handleMostrarCadastro: () => void;
@@ -8,7 +7,7 @@ interface IBotao {
 const Botao = ({ handleMostrarCadastro }: IBotao) => {
   return (
     <>
-      <button className={styles.btn_contd} onClick={handleMostrarCadastro}>
+      <button onClick={handleMostrarCadastro}>
         Ainda não possui uma conta?
       </button>
     </>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Button, Dropdown } from 'react-bootstrap';
-
+import styles from './userLogado.module.css';
 interface User {
   nome: string;
   email: string;
@@ -8,10 +8,10 @@ interface User {
 }
 
 interface LoginProps {
-  userLogado: User | null;
+  userLogado?: User | null;
 }
 
-const Login: React.FC<LoginProps> = () => {
+const UserLogado: React.FC<LoginProps> = () => {
   const [user, setUser] = useState<User | null>(null);
 
   useEffect(() => {
@@ -20,38 +20,50 @@ const Login: React.FC<LoginProps> = () => {
       setUser(JSON.parse(userLogadoData));
     }
   }, []);
-
-  // Cria uma função que verifica se o usuário está logado e redireciona ele para a página correspondente
+  console.log(user);
 
   const verificarLogin = useCallback(() => {
     if (user != null) {
-      window.location.href = '../meus-posts/index.html';
+      window.location.href = '/dashboard';
     } else {
-      window.location.href = '../login/index.html';
+      window.location.href = '/login';
     }
   }, [user]);
 
-  // Renderiza o botão de login ou o menu dropdown do usuário de acordo com o estado do usuário
-
+  function deslogar(): void {
+    localStorage.removeItem('token');
+    localStorage.removeItem('userLogado');
+    document.location.href = '/';
+  }
   return (
-    <div>
+    <>
       {user != null ? (
         <Dropdown>
-          <Dropdown.Toggle id="dropdown-user">{user.nome}</Dropdown.Toggle>
+          <Dropdown.Toggle className={styles.btn} id="dropdown-user">
+            {user.nome}
+          </Dropdown.Toggle>
 
-          <Dropdown.Menu>
-            <Dropdown.Item onClick={verificarLogin}>Meus posts</Dropdown.Item>
-
-            <Dropdown.Item href="../index.html">Sair</Dropdown.Item>
+          <Dropdown.Menu className={styles.menu}>
+            <Dropdown.Item className={styles.menu} href="/dashboard">
+              Dashboard
+            </Dropdown.Item>
+            <Dropdown.Item className={styles.menu} onClick={deslogar}>
+              Sair
+            </Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
       ) : (
-        <Button id="login-btn" onClick={verificarLogin}>
+        <Button
+          variant="success"
+          className={styles.btn}
+          id="login-btn"
+          onClick={verificarLogin}
+        >
           Entrar
         </Button>
       )}
-    </div>
+    </>
   );
 };
 
-export default Login;
+export default UserLogado;

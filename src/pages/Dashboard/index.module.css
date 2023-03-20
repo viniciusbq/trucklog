@@ -1,21 +1,21 @@
-.bdy {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .container {
   display: flex;
   color: var(--white);
   flex-wrap: wrap;
-  padding: 10rem;
+  padding: 2rem 10rem;
   gap: 3rem;
   align-items: center;
   justify-content: center;
 }
-.search_bar {
+.title {
+  text-align: center;
   margin-top: 10rem;
-  margin-bottom: -3rem;
+}
+.lkl {
+  text-align: center;
+}
+.search_bar {
+  margin-top: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -30,15 +30,17 @@
   height: 5rem;
 }
 .btn_search {
-  background-color: var(--green-500);
+  all: unset !important;
+  padding: 1rem 2rem !important;
+  border-radius: 20px;
+  border: 1px solid var(--green-700) !important;
   cursor: pointer;
-  border-radius: 10px;
-  color: var(--white);
-  padding: 1rem;
 }
 .btn_search:hover {
-  background-color: var(--green-700);
-  color: #fff;
+  all: unset !important;
+  border: 1px solid var(--white) !important;
+
+  padding: 1rem 2rem !important;
 }
 .card {
   background-color: var(--green-500);

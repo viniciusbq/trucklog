@@ -1,0 +1,39 @@
+.btn {
+  all: unset;
+  width: fit-content;
+  padding: 0.3rem 1rem;
+  height: 5rem;
+  text-align: center;
+  cursor: pointer;
+  font-size: 2rem;
+  color: var(--green-700) !important;
+  --bs-btn-active-bg: #ffffff;
+}
+
+.btn:hover {
+  all: unset;
+  padding: 0.3rem 1rem;
+
+  width: fit-content;
+  height: 5rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.btn-check:checked + .btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check) + .btn:active {
+  color: var(--green-500);
+  background-color: var(--white) !important;
+  border-color: var(--white) !important;
+}
+
+.menu {
+  font-size: 1.5rem;
+}
+.menu:hover {
+  background-color: #ffffff;
+  width: fit-content;
+}

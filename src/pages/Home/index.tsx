@@ -1,54 +1,34 @@
-import React from "react";
+import React from 'react';
 
-import styles from "./Home.module.css";
+import styles from './Home.module.css';
 
-import logoImg from "../../assets/truck-log-logo.svg";
-import notebookManImg from "../../assets/notebook-man.svg";
-import backgroundObjectImg from "../../assets/bg-item1.svg";
-import backgroundWorld from "../../assets/bg-world.svg";
+import logoImg from '../../assets/truck-log-logo.svg';
+import notebookManImg from '../../assets/notebook-man.svg';
+import backgroundWorld from '../../assets/bg-world.svg';
 
-import taskgoLogoImg from "../../assets/taskgo-logo.png";
-import dbcLogoImg from "../../assets/dbc-logo.svg";
-import singularLogoImg from "../../assets/singular-logo.png";
-import houseLogoImg from "../../assets/house-logo.svg";
-import fibrasulLogoImg from "../../assets/fibrasul-logo.svg";
+import taskgoLogoImg from '../../assets/taskgo-logo.png';
+import dbcLogoImg from '../../assets/dbc-logo.svg';
+import singularLogoImg from '../../assets/singular-logo.png';
+import houseLogoImg from '../../assets/house-logo.svg';
+import fibrasulLogoImg from '../../assets/fibrasul-logo.svg';
 
-import pathIconImg from "../../assets/path-icon.svg";
-import gasIconImg from "../../assets/gas-pump-icon.svg";
-import cameraIconImg from "../../assets/video-camera-icon.svg";
+import pathIconImg from '../../assets/path-icon.svg';
+import gasIconImg from '../../assets/gas-pump-icon.svg';
+import cameraIconImg from '../../assets/video-camera-icon.svg';
 
-import formsPersonImg from "../../assets/forms-person.svg";
+import formsPersonImg from '../../assets/forms-person.svg';
 
-import snapFingerImg from "../../assets/easy-to-use-icon.png";
-import { useNavigate } from "react-router-dom";
+import snapFingerImg from '../../assets/easy-to-use-icon.png';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 export const Home = () => {
-  const navigate = useNavigate();
-
   return (
     <>
-      <header className={styles.container}>
-        <div className={styles.header + " " + styles.content}>
-          <img src={logoImg} alt="Caminhão verde da TruckLog" />
-          <img
-            className={styles.backgroundObject}
-            src={backgroundObjectImg}
-            alt=""
-            aria-hidden
-          />
-          <nav className={styles["header-nav"]}>
-            <a href="#">Nossos Dados</a>
-            <a href="#">Como funciona</a>
-            <a href="#">Benefícios</a>
-            <a href="#">FAQ</a>
-          </nav>
-          <button onClick={() => navigate("/login")}>Faça Login</button>
-        </div>
-      </header>
-
+      <Header />
       <section className={styles.container}>
-        <div className={styles.intro + " " + styles.content}>
-          <div className={styles["text-section"]}>
+        <div className={styles.intro + ' ' + styles.content}>
+          <div className={styles['text-section']}>
             <h1>O MAIOR E MAIS RENTÁVEL APP DE GESTÃO DE FROTAS</h1>
             <p>
               O TruckLog é um app perfeito para você empresário que busca
@@ -67,9 +47,9 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className={styles.partners + " " + styles.container}>
+      <section className={styles.partners + ' ' + styles.container}>
         <div className={styles.partners}>
-          <div className={styles["text-section"]}>
+          <div className={styles['text-section']}>
             <h1 className={styles.title}>Parceiros</h1>
             <h2 className={styles.subtitle}>Eles também contam conosco</h2>
           </div>
@@ -94,8 +74,8 @@ export const Home = () => {
       </section>
 
       <section className={styles.container}>
-        <div className={styles.data + " " + styles.content}>
-          <div className={styles["text-section"]}>
+        <div className={styles.data + ' ' + styles.content}>
+          <div className={styles['text-section']}>
             <h1 className={styles.title}>Nossos Dados</h1>
             <h2 className={styles.subtitle}>
               Entenda o nosso sucesso representado em números
@@ -142,13 +122,13 @@ export const Home = () => {
               <p>Clientes Registrados</p>
             </div>
           </div>
-          <div className={styles["data"]}></div>
+          <div className={styles['data']}></div>
         </div>
       </section>
 
-      <section className={styles.work + " " + styles.container}>
-        <div className={styles.work + " " + styles.content}>
-          <div className={styles["text-section"]}>
+      <section className={styles.work + ' ' + styles.container}>
+        <div className={styles.work + ' ' + styles.content}>
+          <div className={styles['text-section']}>
             <h1 className={styles.title}>Como funciona</h1>
             <h2 className={styles.subtitle}>
               Entenda como nosso sistema funciona e como podemos te ajudar
@@ -156,7 +136,7 @@ export const Home = () => {
           </div>
           <div className={styles.cards}>
             <div className={styles.card}>
-              <div className={styles["image-box"]}>
+              <div className={styles['image-box']}>
                 <img src={pathIconImg} alt="Ícone de rotas" />
               </div>
               <h4>Controle de rotas</h4>
@@ -170,7 +150,7 @@ export const Home = () => {
             <div className={styles.separator} />
 
             <div className={styles.card}>
-              <div className={styles["image-box"]}>
+              <div className={styles['image-box']}>
                 <img src={gasIconImg} alt="Ícone de bomba de gasolina" />
               </div>
               <h4>Controle de abastecimento</h4>
@@ -184,7 +164,7 @@ export const Home = () => {
             <div className={styles.separator} />
 
             <div className={styles.card}>
-              <div className={styles["image-box"]}>
+              <div className={styles['image-box']}>
                 <img src={cameraIconImg} alt="Ícone de camera" />
               </div>
               <h4>Monitoramento em tempo real</h4>
@@ -200,8 +180,8 @@ export const Home = () => {
       </section>
 
       <section className={styles.container}>
-        <div className={styles["forms-section"] + " " + styles.content}>
-          <div className={styles["text-section"]}>
+        <div className={styles['forms-section'] + ' ' + styles.content}>
+          <div className={styles['text-section']}>
             <div>
               <h1 className={styles.title}>Se interessou?</h1>
               <h2 className={styles.subtitle}>
@@ -248,8 +228,8 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className={styles.benefits + " " + styles.container}>
-        <div className={styles.benefits + " " + styles.content}>
+      <section className={styles.benefits + ' ' + styles.container}>
+        <div className={styles.benefits + ' ' + styles.content}>
           <div>
             <h1 className={styles.title}>Principais Benefícios</h1>
             <h2 className={styles.subtitle}>
@@ -308,40 +288,7 @@ export const Home = () => {
           </div>
         </div>
       </section>
-
-      <footer className={styles.container}>
-        <div className={styles.footer + " " + styles.content}>
-          <ul>
-            <li>
-              <a href="#">Benefícios</a>
-            </li>
-            <li>
-              <a href="#">Dados</a>
-            </li>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">
-                <img src={logoImg} alt="" />
-              </a>
-            </li>
-            <li>
-              <a href="#">Parceiros</a>
-            </li>
-            <li>
-              <a href="#">Taxas</a>
-            </li>
-            <li>
-              <a href="#">Contrate</a>
-            </li>
-          </ul>
-          <hr />
-          <p>
-            2010 - 2022 <a href="#">Privacy - Terms</a>
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 };
